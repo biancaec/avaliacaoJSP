@@ -11,7 +11,7 @@ create table usuario (
     perfil_id int,
     constraint fk_usuario_perfil foreign key (perfil_id) references perfil (id)
 );
-drop table usuario;
+
 
 insert into perfil (descricao) values ("moderador");
 insert into perfil (descricao) values ("usuario");
@@ -27,7 +27,7 @@ create table post (
     constraint fk_post_autor foreign key (autor_id) references usuario(id)
 );
 
-drop table post;
+
 
 insert into post (titulo, conteudo, autor_id)
 	values ("Título",
@@ -52,7 +52,7 @@ create table comentario (
     autorizado boolean,
     constraint fk_comentario_post foreign key (post_id) references post(id)
 );
-drop table comentario;
+
 
 select * from comentario;
 
