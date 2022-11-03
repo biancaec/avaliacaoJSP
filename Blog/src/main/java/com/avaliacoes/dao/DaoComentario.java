@@ -43,6 +43,7 @@ public class DaoComentario {
                     comentario.setId(result.getInt("id"));
                     comentario.setConteudo(result.getString("conteudo"));
                     comentario.setPostId(result.getInt("post_id"));
+                    comentario.setAutorizado(result.getBoolean("autorizado"));
                     comentarios.add(comentario);
                 }
             }catch (SQLException e) {
